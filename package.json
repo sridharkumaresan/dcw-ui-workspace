@@ -2,7 +2,11 @@
   "name": "@dcw-ui-workspace/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "check:dcw-react": "nx lint @functions/dcw-react && nx test @functions/dcw-react --coverage",
+    "prepare": "husky install",
+    "test": "nx test @functions/dcw-react --coverage"
+  },
   "private": true,
   "devDependencies": {
     "@babel/core": "^7.14.5",
@@ -39,6 +43,7 @@
     "@vitejs/plugin-react": "^4.2.0",
     "@vitest/ui": "^3.0.0",
     "babel-jest": "^29.7.0",
+    "chokidar-cli": "^3.0.0",
     "core-js": "^3.36.1",
     "eslint": "^9.8.0",
     "eslint-config-prettier": "^10.0.0",
@@ -63,7 +68,8 @@
     "typescript-eslint": "^8.19.0",
     "verdaccio": "^6.0.5",
     "vite": "^6.0.0",
-    "vitest": "^3.0.0"
+    "vitest": "^3.0.0",
+    "husky": "^8.0.0"
   },
   "workspaces": [
     "packages/*",
