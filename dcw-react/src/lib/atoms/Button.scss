@@ -1,0 +1,22 @@
+.dcw-button {
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: 600;
+  
+    &--primary {
+      background-color: #0078d4;
+      color: white;
+  
+      &:hover {
+        background-color: #005a9e;
+      }
+    }
+  
+    &--secondary {
+      background-color: #eaeaea;
+      color: #333;
+  
+      &:hover {
+        background-color: #cccccc;
+      }
+    }
+  }

@@ -1,0 +1,16 @@
+{
+    "source": ["dcw-react/tokens/**/*.json"],
+    "platforms": {
+      "scss": {
+        "transformGroup": "scss",
+        "buildPath": "dcw-react/src/styles/",
+        "files": [
+          {
+            "destination": "_tokens.scss",
+            "format": "scss/variables"
+          }
+        ]
+      }
+    }
+  }
+  

@@ -1,0 +1,10 @@
+{
+    "font": {
+      "base": { "value": "'Segoe UI', sans-serif" },
+      "size": {
+        "body": { "value": "16px" },
+        "heading": { "value": "24px" }
+      }
+    }
+  }
+  

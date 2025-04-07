@@ -1,0 +1,9 @@
+// global.scss
+@import './_tokens.scss'; // Only if you have tokens built from Style Dictionary
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f5f5f5;
+}

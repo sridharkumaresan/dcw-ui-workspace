@@ -4,18 +4,90 @@
   "license": "MIT",
   "scripts": {},
   "private": true,
-  "dependencies": {},
   "devDependencies": {
-    "@nx/js": "20.7.1",
+    "@babel/core": "^7.14.5",
+    "@babel/preset-react": "^7.14.5",
+    "@eslint/js": "^9.8.0",
+    "@nx/eslint": "20.7.1",
+    "@nx/eslint-plugin": "20.7.1",
+    "@nx/jest": "20.7.1",
+    "@nx/js": "^20.7.1",
+    "@nx/react": "^20.7.1",
+    "@nx/rollup": "20.7.1",
+    "@nx/storybook": "20.7.1",
+    "@nx/vite": "20.7.1",
+    "@nx/web": "20.7.1",
+    "@rollup/plugin-url": "^8.0.2",
+    "@storybook/addon-essentials": "8.6.12",
+    "@storybook/addon-interactions": "^8.4.6",
+    "@storybook/core-server": "8.6.12",
+    "@storybook/jest": "^0.2.3",
+    "@storybook/react-vite": "8.6.12",
+    "@storybook/test-runner": "^0.19.0",
+    "@storybook/testing-library": "^0.2.2",
+    "@svgr/rollup": "^8.1.0",
     "@swc-node/register": "~1.9.1",
+    "@swc/cli": "~0.6.0",
     "@swc/core": "~1.5.7",
     "@swc/helpers": "~0.5.11",
+    "@testing-library/react": "16.1.0",
+    "@types/classnames": "^2.3.0",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^20.0.0",
+    "@types/react": "18.3.1",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "^4.2.0",
+    "@vitest/ui": "^3.0.0",
+    "babel-jest": "^29.7.0",
+    "core-js": "^3.36.1",
+    "eslint": "^9.8.0",
+    "eslint-config-prettier": "^10.0.0",
+    "eslint-plugin-import": "2.31.0",
+    "eslint-plugin-jsx-a11y": "6.10.1",
+    "eslint-plugin-react": "7.35.0",
+    "eslint-plugin-react-hooks": "5.0.0",
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0",
+    "jiti": "2.4.2",
+    "jsdom": "~22.1.0",
     "nx": "20.7.1",
     "prettier": "^2.6.2",
+    "rollup": "^4.14.0",
+    "sass": "^1.86.3",
+    "storybook": "8.6.12",
+    "style-dictionary": "^4.3.3",
+    "ts-jest": "^29.1.0",
+    "ts-node": "10.9.1",
     "tslib": "^2.3.0",
-    "typescript": "~5.7.2"
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.19.0",
+    "verdaccio": "^6.0.5",
+    "vite": "^6.0.0",
+    "vitest": "^3.0.0"
   },
   "workspaces": [
-    "packages/*"
-  ]
+    "packages/*",
+    "dcw-react",
+    "dcw-spfx-webparts",
+    "dcw-demo-app"
+  ],
+  "dependencies": {
+    "@fluentui/react": "^8.122.14",
+    "classnames": "^2.5.1",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "nx": {
+    "includedScripts": [],
+    "targets": {
+      "local-registry": {
+        "executor": "@nx/js:verdaccio",
+        "options": {
+          "port": 4873,
+          "config": ".verdaccio/config.yml",
+          "storage": "tmp/local-registry/storage"
+        }
+      }
+    }
+  }
 }
