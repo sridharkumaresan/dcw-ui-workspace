@@ -11,7 +11,9 @@ const config: StorybookConfig = {
     name: '@storybook/react-vite',
     options: {},
   },
-
+  docs: {
+    autodocs: 'tag',
+  },
   viteFinal: async (config) =>
     mergeConfig(config, {
       plugins: [react(), nxViteTsPaths()],
