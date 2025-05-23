@@ -6,15 +6,7 @@ import { computeClamp } from './utils/computeClamp';
 export function useTypographyPresetStyle(preset: TypographyPreset): React.CSSProperties {
   const token = typographyTokens[preset];
 
-  if (preset in clampTypographyMap) {
-    return {
-      fontSize: computeClamp(clampTypographyMap[preset]),
-      fontWeight: token.fontWeight,
-      lineHeight: token.lineHeight ? `${token.lineHeight}px` : undefined,
-    };
-  }
-
-  return token.fontSize
+  const responsiveStyle = token.fontSize
     ? useResponsiveTypography(token.fontSize, {
         fontWeight: token.fontWeight,
         lineHeight: token.lineHeight,
@@ -23,4 +15,14 @@ export function useTypographyPresetStyle(preset: TypographyPreset): React.CSSPro
         fontWeight: token.fontWeight,
         lineHeight: token.lineHeight ? `${token.lineHeight}px` : undefined,
       };
+
+  if (preset in clampTypographyMap) {
+    return {
+      fontSize: computeClamp(clampTypographyMap[preset]),
+      fontWeight: token.fontWeight,
+      lineHeight: token.lineHeight ? `${token.lineHeight}px` : undefined,
+    };
+  }
+
+  return responsiveStyle;
 }
