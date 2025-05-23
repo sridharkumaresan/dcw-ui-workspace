@@ -5,7 +5,8 @@
   "scripts": {
     "check:dcw-react": "nx lint @functions/dcw-react && nx test @functions/dcw-react --coverage",
     "prepare": "husky install",
-    "test": "nx test @functions/dcw-react --coverage"
+    "test": "nx test @functions/dcw-react --coverage",
+    "tokens:build": "node dcw-react/tokens/build.js"
   },
   "private": true,
   "devDependencies": {
@@ -79,6 +80,7 @@
   ],
   "dependencies": {
     "@fluentui/react": "^8.122.14",
+    "@fluentui/react-components": "^9.64.0",
     "classnames": "^2.5.1",
     "react": "18.3.1",
     "react-dom": "18.3.1"
