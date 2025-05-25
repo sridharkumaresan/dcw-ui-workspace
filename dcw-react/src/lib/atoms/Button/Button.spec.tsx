@@ -1,7 +1,6 @@
-import * as React from 'react';
 import { render, fireEvent } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import { Button } from './Button';
+import { Button } from '../Button';
 
 describe('Button Component', () => {
   it('renders primary button with text', () => {
