@@ -1,7 +1,7 @@
 import { useResponsiveTypography } from './useResponsiveTypography';
-import { typographyTokens, TypographyPreset } from './typographyTokens';;
+import { typographyTokens, TypographyPreset } from './typographyTokens';
 import { clampTypographyMap } from './clampTypographyMap';
-import { computeClamp } from './utils/computeClamp';
+import { computeClamp } from './utils/computeClamp';;
 
 export function useTypographyPresetStyle(preset: TypographyPreset): React.CSSProperties {
   const token = typographyTokens[preset];
